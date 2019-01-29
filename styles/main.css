@@ -24,6 +24,12 @@ body {
     color: #4CAF50;
   border: 2px solid #4CAF50;
   }
+.downloadCounter {
+    position: absolute;
+    text-align: left;
+    margin-left: 45%;
+    margin-top: 40%;
+  }
 
 h2 {
     position: absolute;
