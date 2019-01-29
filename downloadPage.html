@@ -15,6 +15,11 @@
       <button class="button" type="button" onclick="DownloadButtonClick()">Download</button>
         <p id="downloads">Downloads</p>
         <script>
+            window.onload = function () {
+                var counter = localStorage.getItem('Downloads') || 0;
+
+                document.getElementById("downloads").innerText = "Downloads: " + counter;
+            }
             function DownloadButtonClick() {
                 var counter = localStorage.getItem('Downloads') || 0;
                 counter++;
