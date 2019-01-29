@@ -12,9 +12,20 @@
 <body>
     <div class="center">
         <h2 class="title">Download Wouter & Klaasje</h2>
-        <button class="button" type="button" onclick="window.open('https://www.dropbox.com/s/h8k00alv5xhh8lh/WouterKlaasje.apk?dl=1','_blank')">Download</button>
-    </div>
-    <script></script>
+      <button class="button" type="button" onclick="DownloadButtonClick()">Download</button>
+        <p id="downloads">Downloads</p>
+        <script>
+            function DownloadButtonClick() {
+                var counter = localStorage.getItem('Downloads') || 0;
+                counter++;
+                localStorage.setItem('Downloads', counter);
+
+                document.getElementById("downloads").innerText = "Downloads: " + counter;
+
+                window.open('https://www.dropbox.com/s/h8k00alv5xhh8lh/WouterKlaasje.apk?dl=1', '_blank')
+            }
+
+        </script>
 </body>
 
 </html>
